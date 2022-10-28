@@ -1,0 +1,12 @@
+OWNCLOUD_DOMAIN=vmirtom.it:48080     #modificare con il proprio nome di dominio e scegliere una porta che verrà utilizzata per accedere alla pagina web di ownCloud
+OWNCLOUD_DB_TYPE=mysql                  #lasciare invariato
+OWNCLOUD_DB_NAME=owncloud               #nome del database utilizzato da ownCloud
+OWNCLOUD_DB_USERNAME=owncloud           #nome dell'utente utilizzato da ownCloud per accedere al db
+OWNCLOUD_DB_PASSWORD=owncloud           #password dell'utente utilizzato da ownCloud per accedere al db
+OWNCLOUD_DB_HOST=db                     #lasciare invariato... è il nome del container per il DB
+OWNCLOUD_ADMIN_USERNAME=admin           #nome dell'utente admin
+OWNCLOUD_ADMIN_PASSWORD=admin           #password per l'utente admin
+OWNCLOUD_MYSQL_UTF8MB4=true             #lasciare invariato...
+OWNCLOUD_REDIS_ENABLED=true             #lasciare invariato...
+OWNCLOUD_REDIS_HOST=redis               #lasciare invariato...
+MARIADB_ROOT_PASSWORD=owncloud          #password dell'utente root all'interno del database
