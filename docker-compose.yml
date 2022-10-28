@@ -55,7 +55,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - ./mysql:/var/lib/mysql
+      - mysql:/var/lib/mysql
 
 
   redis:
