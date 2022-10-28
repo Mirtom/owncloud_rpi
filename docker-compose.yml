@@ -58,7 +58,7 @@ services:
       - ./mysql:/var/lib/mysql
 
   redis:
-    image: redis:6
+    image: arm32v7/redis:5-alpine3.16
     container_name: owncloud_redis
     restart: always
     command: ["--databases", "1"]
