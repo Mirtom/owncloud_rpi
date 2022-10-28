@@ -10,7 +10,7 @@ volumes:
 
 services:
   owncloud:
-    image: owncloud/server:latest
+    image: owncloud/server:${OWNCLOUD_VERSION}
     container_name: owncloud_server
     restart: always
     ports:
@@ -48,14 +48,14 @@ services:
       - MYSQL_USER=owncloud
       - MYSQL_PASSWORD=owncloud
       - MYSQL_DATABASE=owncloud
-    command: ["--max-allowed-packet=64M", "--innodb-log-file-size=64M"]
+    command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-u", "root", "--password=owncloud"]
       interval: 10s
       timeout: 5s
       retries: 5
     volumes:
-      - mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
 
   redis:
     image: redis:6
